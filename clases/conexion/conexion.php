@@ -15,9 +15,9 @@
         //Creamos la función constructor.
         function __construct(){
             //Definimos una variable para guardar todos los datos de la conexión.
-            $listadatos = $this->datosConexion();
+            $listaDatos = $this->datosConexion();
             //Recorremos los datos de conexión.
-            foreach ($listadatos as $key => $value) {
+            foreach ($listaDatos as $key => $value) {
                 //Perdimos que se iguale los atributos de la clase a los valores del array.
                 $this->server = $value['server'];
                 $this->user = $value['user'];
@@ -103,6 +103,15 @@
             }else{
                 return 0;
             }
+
+        }
+
+        //Encriptar
+        //Creamos una función para encriptación.
+        protected function encriptar($string){
+
+            //Función de php que nos premite encriptar un string
+            return md5($string);
 
         }
 

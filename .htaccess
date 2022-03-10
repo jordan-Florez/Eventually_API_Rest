@@ -1,5 +1,15 @@
 RewriteEngine On
 
+#Esta linea nos permite quitar la extensión de archivo .php para poder acceder o entrar a ellos.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+#Lo mismo que la anterior pero con la extensión html.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+
 # Si la ruta no es un archivo existente, ni una carpeta
 # Reescribir al index
 RewriteCond %{REQUEST_FILENAME} !-f

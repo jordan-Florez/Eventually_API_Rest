@@ -15,9 +15,10 @@ $conexion = new conexion;
 // print_r($conexion->nonQuery($query));
 
 //Prueba de insert into, para recibir el id (Que se hace debido a que especificamos que cuando una fila sea afectada nos devuelva el último id).
-$query = "INSERT INTO usuarios (UsuarioId)value(11)";
-print_r($conexion->nonQueryId($query));
+// $query = "INSERT INTO usuarios (UsuarioId)value(11)";
+// print_r($conexion->nonQueryId($query));
 
-//Video #4 min 2:03
+// hola index
+
 
 ?>
