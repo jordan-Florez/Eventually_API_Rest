@@ -33,7 +33,7 @@
                 //Función die para que no siga ejecutando nada.
                 die();
             }else{
-                echo "todo joya c:";
+                // echo "todo joya c:";
             }
 
         }
