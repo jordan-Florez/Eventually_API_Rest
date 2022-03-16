@@ -7,8 +7,8 @@ require_once "clases/conexion/conexion.php";
 $conexion = new conexion;
 
 //Traemos todos los datos de la tabla usuarios en la DB.
-// $query = "SELECT * FROM usuarios";
-// print_r($conexion->obtenerDatos($query));
+$query = "SELECT * FROM usuarios";
+print_r($conexion->obtenerDatos($query));
 
 //Prueba de insert into, para recibir un 1 (Que significa que se agregó una fila más).
 // $query = "INSERT INTO usuarios (UsuarioId)value(10)";

@@ -23,11 +23,15 @@ class auth extends conexion{
             $usuario = $datos['usuario'];
             $password = $datos['password'];
             $password = parent::encriptar($password);
+            echo "Password 1:";
+            print_r($password);
 
             //Llamamos al método de esta misma clase para saber si este correo si posee datos y obtenerlos en caso de que si.
             $datos = $this->obtenerDatosUsuario($usuario);
             //Evaluamos si tiene datos.
             if($datos){
+                echo "Password 2:";
+                print_r($datos[0]['password']);
                 //Verificamos si la contraseña es igual.
                 if($password == $datos[0]['Password']){
                     //Verificamos si el usuario está activo.
