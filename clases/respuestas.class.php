@@ -61,6 +61,21 @@ class respuestas{
 		return $this->response;
 	}
 
+	//Creamos un nuevo método de error que hace referencia a un error interno del servidor (lo usamos cuando comprobamos si exsite el token).
+	public function error_401($valor = "No autorizado"){
+
+		//Aquí definimos que el status lo pase de "okay" a "error" para usarlo en donde sepamos que hay error.
+		$this->response['status'] = "error";
+		//Y ahora en vez de enviar un array vacío para la segunda fila, enviamos algunos errores.
+		$this->response['result'] = array(
+			"error_id" => "401",
+			"error_msg" => $valor
+		);
+		return $this->response;
+	}
+
+
+
 
 }
 
