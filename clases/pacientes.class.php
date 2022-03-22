@@ -6,7 +6,6 @@ require_once "respuestas.class.php";
 
 //Declaramos lo necesario.
 
-
 class pacientes extends conexion{
 
     //Creamos un atributo privado que nos servirá para identificar la tabla de la que se consulta.
@@ -57,8 +56,7 @@ class pacientes extends conexion{
     }
 
     //Método para comporbar si la información por post es adecuada.
-    public function post($json)
-    {
+    public function post($json){
 
         //Instanciamos la clase respuestas.
         $_respuestas = new respuestas;
